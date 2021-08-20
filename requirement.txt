@@ -1,0 +1,5 @@
+matplotlib
+loguru
+pyyaml
+tencentcloud-sdk-python
+pkgutil
