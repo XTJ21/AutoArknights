@@ -18,14 +18,14 @@ from typing import List, Tuple, Dict
 
 from lib import ocr
 
-data_character = json.loads(pkgutil.get_data('lib', '../data/character.json'))
+data_character = json.loads(pkgutil.get_data('lib', '../data/gamedata/character.json'))
 
 data_character_cn = json.loads(
-    pkgutil.get_data('lib', '../data/character_cn.json'))
+    pkgutil.get_data('lib', '../data/gamedata/character_cn.json'))
 
-data_tags = json.loads(pkgutil.get_data('lib', '../data/tag.json'))
+data_tags = json.loads(pkgutil.get_data('lib', '../data/gamedata/tag.json'))
 
-data_tag_with_ch = json.loads(pkgutil.get_data('lib', '../data/tagwithch.json'))
+data_tag_with_ch = json.loads(pkgutil.get_data('lib', '../data/gamedata/tagwithch.json'))
 
 # 在出现错误之后再进行错误赐予更换
 ERROR_MAP = {
@@ -194,7 +194,7 @@ def recruitment(tags: List) -> Tuple:
             if a == 3:
                 return tags.index(tag[0]), tags.index(tag[1]), tags.index(
                     tag[2])
-    return False
+    return ()
 
 
 if __name__ == '__main__':
